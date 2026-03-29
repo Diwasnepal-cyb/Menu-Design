@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Cafe Menu</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300&family=Dancing+Script:wght@700&display=swap" rel="stylesheet"/>
+  <style>
+    
+body {
+  background: #2B1100;
+  font-family: 'Georgia', serif;
+}
+.page {
+  background: #3E1A00;
+  border: 1px solid #C68642;
+  box-shadow: 0 8px 40px rgba(0,0,0,0.5);
+}
+.header h1 {
+  font-family: 'Georgia', serif;
+  color: #FFF8F0;
+  font-size: 4rem;
+}
+.header .hours {
+  color: #C8A882;
+}
+.header-rule::before,
+.header-rule::after {
+  background: linear-gradient(to right, transparent, #C68642, transparent);
+}
+.header-rule span {
+  color: #C68642;
+}
+.section-title {
+  color: #C68642;
+  letter-spacing: 0.12em;
+}
+.section-divider {
+  background: linear-gradient(to right, #C68642, transparent);
+}
+.item-name { color: #FFF8F0; }
+.item-price { color: #E0A060; }
+.item-desc  { color: #C8A882; }
+.footer-ornament { color: #C68642; }
+    
+  </style>
+</head>
+<body>
+  <div class="page">
+
+    <div class="header">
+      <h1>Menu</h1>
+      <p class="hours">Open from 8am to 9pm every day</p>
+      <div class="header-rule"><span>✦</span></div>
+    </div>
+
+    <div class="section">
+      <div class="section-title">Sandwiches &amp; Wraps</div>
+      <div class="section-divider"></div>
+
+      <div class="item">
+        <span class="item-name">Ham and Cheese</span>
+        <span class="item-price">£2.95</span>
+        <span class="item-desc">Cooked ham, cheddar cheese slices, wholemeal bread</span>
+      </div>
+      <div class="item">
+        <span class="item-name">Hummus and Feta</span>
+        <span class="item-price">£3.95</span>
+        <span class="item-desc">Roasted red pepper hummus, feta, salad, rye bread</span>
+      </div>
+      <div class="item">
+        <span class="item-name">Egg Classic</span>
+        <span class="item-price">£1.95</span>
+        <span class="item-desc">Free range eggs, mayo, malted granary bread</span>
+      </div>
+      <div class="item">
+        <span class="item-name">Chicken Wrap</span>
+        <span class="item-price">£1.95</span>
+        <span class="item-desc">Chargrilled chicken, garlic mayo, shredded lettuce, plain wrap</span>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="section-title">Soups</div>
+      <div class="section-divider"></div>
+
+      <div class="item">
+        <span class="item-name">Carrot and Coriander</span>
+        <span class="item-price">£2.50</span>
+        <span class="item-desc">Warming carrot and coriander seed soup with spices</span>
+      </div>
+      <div class="item">
+        <span class="item-name">Lentil</span>
+        <span class="item-price">£2.50</span>
+        <span class="item-desc">Hearty red lentil soup with a dash of sour cream</span>
+      </div>
+      <div class="item">
+        <span class="item-name">Tomato</span>
+        <span class="item-price">£2.50</span>
+        <span class="item-desc">Homemade organic roasted tomato soup</span>
+      </div>
+    </div>
+
+    <div class="footer-ornament">· · ✦ · ·</div>
+
+  </div>
+</body>
+</html>
