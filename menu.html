@@ -6,23 +6,13 @@
   <title>Cafe Menu</title>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300&family=Dancing+Script:wght@700&display=swap" rel="stylesheet"/>
   <style>
-    :root {
-      --cream: #faf6f0;
-      --warm-white: #fff9f2;
-      --espresso: #2c1a0e;
-      --mocha: #6b3f1e;
-      --caramel: #c8834a;
-      --blush: #e8c4a0;
-      --rule: #d4b896;
-    }
-
     * { margin: 0; padding: 0; box-sizing: border-box; }
 
     body {
-      background-color: var(--cream);
+      background: #2B1100;
       background-image:
-        radial-gradient(ellipse at 20% 0%, #f5dfc2 0%, transparent 50%),
-        radial-gradient(ellipse at 80% 100%, #e8d5bc 0%, transparent 50%);
+        radial-gradient(ellipse at 20% 0%, #4A2000 0%, transparent 50%),
+        radial-gradient(ellipse at 80% 100%, #3D1A00 0%, transparent 50%);
       min-height: 100vh;
       display: flex;
       align-items: flex-start;
@@ -34,23 +24,21 @@
     .page {
       width: 100%;
       max-width: 620px;
-      background: var(--warm-white);
+      background: #3E1A00;
       padding: 64px 56px 72px;
-      box-shadow:
-        0 2px 4px rgba(44,26,14,0.06),
-        0 8px 32px rgba(44,26,14,0.10),
-        0 32px 80px rgba(44,26,14,0.08);
+      box-shadow: 0 2px 4px rgba(0,0,0,0.3), 0 8px 32px rgba(0,0,0,0.5);
       position: relative;
+      border-left: 4px solid #C68642;
+      border-right: 4px solid #C68642;
       animation: fadeUp 0.8s ease both;
     }
 
     .page::before {
       content: '';
       position: absolute;
-      inset: 10px;
-      border: 1px solid var(--rule);
+      inset: 12px;
+      border: 1px solid rgba(198,132,66,0.3);
       pointer-events: none;
-      opacity: 0.5;
     }
 
     @keyframes fadeUp {
@@ -58,7 +46,6 @@
       to   { opacity: 1; transform: translateY(0); }
     }
 
-    /* Header */
     .header {
       text-align: center;
       margin-bottom: 48px;
@@ -67,17 +54,18 @@
     .header h1 {
       font-family: 'Dancing Script', cursive;
       font-size: 4.2rem;
-      color: var(--espresso);
+      color: #FFF8F0;
       line-height: 1;
       letter-spacing: -0.5px;
       margin-bottom: 12px;
+      text-shadow: 0 2px 20px rgba(198,132,66,0.4);
     }
 
     .header .hours {
       font-family: 'Cormorant Garamond', serif;
       font-size: 0.95rem;
       font-style: italic;
-      color: var(--mocha);
+      color: #C8A882;
       letter-spacing: 0.04em;
       font-weight: 300;
     }
@@ -94,15 +82,11 @@
       content: '';
       flex: 1;
       height: 1px;
-      background: linear-gradient(to right, transparent, var(--caramel), transparent);
+      background: linear-gradient(to right, transparent, #C68642, transparent);
     }
 
-    .header-rule span {
-      color: var(--caramel);
-      font-size: 1.1rem;
-    }
+    .header-rule span { color: #C68642; font-size: 1.1rem; }
 
-    /* Section */
     .section {
       margin-bottom: 40px;
       animation: fadeUp 0.8s ease both;
@@ -116,7 +100,7 @@
       font-family: 'Playfair Display', serif;
       font-size: 1.15rem;
       font-weight: 700;
-      color: var(--espresso);
+      color: #C68642;
       letter-spacing: 0.12em;
       text-transform: uppercase;
       margin-bottom: 6px;
@@ -125,11 +109,10 @@
     .section-divider {
       width: 100%;
       height: 1px;
-      background: linear-gradient(to right, var(--caramel) 0%, var(--rule) 60%, transparent 100%);
+      background: linear-gradient(to right, #C68642 0%, #7A3B10 60%, transparent 100%);
       margin-bottom: 20px;
     }
 
-    /* Menu Item */
     .item {
       display: grid;
       grid-template-columns: 1fr auto;
@@ -137,31 +120,24 @@
       column-gap: 16px;
       margin-bottom: 18px;
       padding-bottom: 18px;
-      border-bottom: 1px solid rgba(212,184,150,0.3);
-      transition: background 0.2s;
+      border-bottom: 1px solid rgba(198,132,66,0.2);
     }
 
-    .item:last-child {
-      border-bottom: none;
-      margin-bottom: 0;
-      padding-bottom: 0;
-    }
+    .item:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
 
     .item-name {
       font-family: 'Playfair Display', serif;
       font-size: 1.05rem;
       font-weight: 400;
-      color: var(--espresso);
+      color: #FFF8F0;
       grid-column: 1;
       grid-row: 1;
-      letter-spacing: 0.01em;
     }
 
     .item-price {
       font-family: 'Cormorant Garamond', serif;
       font-size: 1.05rem;
-      font-weight: 400;
-      color: var(--mocha);
+      color: #E0A060;
       grid-column: 2;
       grid-row: 1;
       white-space: nowrap;
@@ -174,23 +150,21 @@
       font-size: 0.88rem;
       font-weight: 300;
       font-style: italic;
-      color: var(--mocha);
+      color: #C8A882;
       opacity: 0.85;
       grid-column: 1 / 3;
       grid-row: 2;
       margin-top: 3px;
       line-height: 1.5;
-      letter-spacing: 0.01em;
     }
 
-    /* Footer ornament */
     .footer-ornament {
       text-align: center;
       margin-top: 48px;
-      color: var(--caramel);
+      color: #C68642;
       font-size: 1.3rem;
       letter-spacing: 0.5em;
-      opacity: 0.6;
+      opacity: 0.7;
     }
 
     @media (max-width: 520px) {
@@ -201,7 +175,6 @@
 </head>
 <body>
   <div class="page">
-
     <div class="header">
       <h1>Menu</h1>
       <p class="hours">Open from 8am to 9pm every day</p>
@@ -211,7 +184,6 @@
     <div class="section">
       <div class="section-title">Sandwiches &amp; Wraps</div>
       <div class="section-divider"></div>
-
       <div class="item">
         <span class="item-name">Ham and Cheese</span>
         <span class="item-price">£2.95</span>
@@ -237,7 +209,6 @@
     <div class="section">
       <div class="section-title">Soups</div>
       <div class="section-divider"></div>
-
       <div class="item">
         <span class="item-name">Carrot and Coriander</span>
         <span class="item-price">£2.50</span>
@@ -256,7 +227,7 @@
     </div>
 
     <div class="footer-ornament">· · ✦ · ·</div>
-
   </div>
 </body>
 </html>
+
